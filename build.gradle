@@ -5,7 +5,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "com.gradle.publish:plugin-publish-plugin:0.9.0"
+    classpath "com.gradle.publish:plugin-publish-plugin:0.9.1"
   }
 }
 
@@ -18,7 +18,8 @@ plugins {
 
 apply plugin: 'com.gradle.plugin-publish'
 
-def versionNumber = '0.1-SNAPSHOT'
+
+def versionNumber = '0.1'
 
 pluginBundle {
   website = 'http://www.github.com/tlberglund'
@@ -62,7 +63,7 @@ jar {
 
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '2.4'
+  gradleVersion = '2.9'
 }
 
 
