@@ -2,7 +2,6 @@ package com.timberglund.gradle.plugin.presentation
 
 import org.asciidoctor.gradle.AsciidoctorTask
 import org.gradle.api.tasks.TaskAction
-import org.gradle.api.DefaultTask
 
 class PresentationTask extends AsciidoctorTask {
   File frameworkDir = new File('src/framework')

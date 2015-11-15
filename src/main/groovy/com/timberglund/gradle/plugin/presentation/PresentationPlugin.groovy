@@ -25,13 +25,13 @@ class PresentationPlugin implements Plugin<Project> {
     }
 
     project.tasks.getByName('lessc').configure {
-      sourceDir 'src/less'
+      sourceDir 'src/styles'
       include "**/*.less"
       destinationDir = "${project.buildDir}/asciidoc/deckjs/deck.js/themes/style"
       mustRunAfter project.tasks.getByName('slides')
       doLast {
         project.copy {
-          from('src/less') {
+          from('src/styles') {
             include '*.css'
           }
           into destinationDir
